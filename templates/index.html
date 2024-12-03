@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+</head>
+<body>    
+
+    {% for b in bandas %}
+
+    <h1>Artista</h1>
+        <ul>
+            
+            <li>{{b.nome}}</li>
+            <li>{{b.estilo_musical}}</li>
+            <li>{{b.pais}}</li>
+            <li>{{b.descricao}}</li>
+            
+        </ul>
+    
+    
+
+    {% endfor %}
+
+</body>
+</html>
+
