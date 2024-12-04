@@ -46,9 +46,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #"django.contrib.auth.middleware.LoginRequiredMiddleware", #adicionado
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'musicalidade.urls'
 
@@ -123,6 +125,9 @@ STATIC_URL = 'static/'
 MEDIA_ROOT = '/media/'
 
 MEDIA_URL = os.path.join(BASE_DIR, "media/")
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'cadastro' 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
