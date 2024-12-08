@@ -19,7 +19,7 @@ def cadastro(request):
     form= CadastroArtista()
     return render(request, 'cadastro.html', {'form': form})
     
-  
+
     
 
     

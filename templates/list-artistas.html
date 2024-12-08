@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for b in bandas %}
+
+    <h1>Artista</h1>
+        <ul>
+            
+            <li>{{b.nome}}</li><br>
+            <li>{{b.estilo_musical}}</li><br>
+            <li>{{b.pais}}</li><br>
+            <li>{{b.descricao}}</li><br>
+            
+        </ul>
+        
+    {% endfor %}
+
+{% endblock %}

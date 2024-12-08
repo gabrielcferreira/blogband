@@ -2,18 +2,43 @@
 
 {% block content %}
 
-    {% for b in bandas %}
+    <header>
+        <h1>Bem vindo ao site BlogBand</h1>
+        <p>Somos uma comunidade de divulgação de artistas!</p>
+       
+    </header>
+    <!-- Para buscar um novo artista-->
+    <section>
+        <div>
+            <h3>Descubra o artista que fará seus próximos dias mais musicais!</h3>
+            <p>De qual país será o seu próximo artista? <input type="text" name="país" id="país" placeholder="Digite o país..."></p>
+            <p>Qual o estilo musical que você busca? <input type="text" name="estilomusical" id="estilomusical" placeholder="Digite o gênero musical..."></p>
+        </div>        
+    </section>
+    <!--Para saber mais sobre algum artista novo-->
+    <section>
+        <div>
+            <h3>Já tem um artista deixando seus dias mais musicais? Que tal saber mais sobre ele?</h3>
+            <p>Qual o nome do artista? <input type="text" name="nomeartista" id="nomeartista"></p>
+        </div>
+    </section>
+    <!-- Chamada para quem quer divulgar seus trabalhos -->
+     <section>
+        <div>
+            <h3>Você é um artista e deseja dilvugar conosco? Será um prazer tê-lo em nossa plataforma!</h3>
+            <p>Para prosseguir com a divulgação é necessário um cadastro rápido e algumas informações.</p>
+            <p><a href="">Clique aqui</a> para se cadastrar e deixar o dia de alguém mais musical!<p>            
+        </div>
+     </section>
+     <!-- Footer -->
+      <footer>
+        <h4>Nossos contatos</h4>
+        <p>instagram: @blogband123</p>
+        <p>e-mail: blogband@teste.com</p>
+        <p><strong>Este é um blog gratuito com o intuito de divulgação</strong></p>
+        <p><strong>Não visamos ganhos e nem cobramos qualquer tipo de taxa. Fique a vontade para nos contatar e tirar sua dúvidas.</strong></p>
+        <p>&copy; BlogBand</p>
+      </footer>
+    
 
-    <h1>Artista</h1>
-        <ul>
-            
-            <li>{{b.nome}}</li>
-            <li>{{b.estilo_musical}}</li>
-            <li>{{b.pais}}</li>
-            <li>{{b.descricao}}</li>
-            
-        </ul>
-        
-    {% endfor %}
-
-    {% endblock %}
+{% endblock %}

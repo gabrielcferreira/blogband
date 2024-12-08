@@ -16,3 +16,4 @@ class CadastroArtista(forms.ModelForm):
 
 
         
+      
