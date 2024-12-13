@@ -1,19 +1,49 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+   <section>
+        <div>
+            <h3>Descubra o artista que fará seus próximos dias mais musicais!</h3>
+            <form action="?" method="GET">
+                <input type="text" name="listar-artistas" id="listar-artistas" placeholder="Digite o nome ou Estilo...">
+                
+                <button type="submit">Buscar</button>
+                <a href="{% url 'busca' %}">Limpar</a>
 
-    {% for b in bandas %}
-
-    <h1>Artista</h1>
-        <ul>
-            
-            <li>{{b.nome}}</li><br>
-            <li>{{b.estilo_musical}}</li><br>
-            <li>{{b.pais}}</li><br>
-            <li>{{b.descricao}}</li><br>
-            
-        </ul>
+            </form>        
         
-    {% endfor %}
+        </div>        
+    </section>
+    
+    <div>
+        <table>           
 
+            <tr>
+                <th>Nome</th>
+                <th>Estilo Musical</th>
+                <th>Foto</th>
+            </tr>
+            {% for artista in InfoArtista %}
+            <tr>
+                    <td>{{artista.nome}}</td>
+                    <td>{{artista.estilo_musical}}</td>       
+                    <td>{% if artista.imagem %}
+                        <img src="{{ artista.imagem.url }}" style="width: 100px; height: auto;"/>
+                        {% endif %}    
+                        </td>     
+                    <td>
+                        <a href="" title="saber mais">Ver mais</a>
+                    </td>
+                {% empty %}
+                <tr>    
+                    <td>Sem artistas</td>
+                </tr>            
+            </tr>                
+            {% endfor %}
+        </table>  
+        
+             
+    </div>    
+    
 {% endblock %}

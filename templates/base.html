@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>    
+    <header>
+        
+        <p style="font-size:45px;color:rgb(224, 182, 45);text-align:center; border-radius: 10px; background-color:blueviolet; width:200px;height:50px; margin:auto"><strong>BlogBand</strong></p>
+        
+        {% if user.is_authenticated %}
+            <!--Olá, {{ user.username }} -->
+            <a href="{% url 'logout' %}" style="text-align: right;">Sair</a>
+            
+        {% else %}
+            <p><a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Cadastre-se</a></p>
+
+        {% endif %}
+    </header>
 
 {% block content %}
 

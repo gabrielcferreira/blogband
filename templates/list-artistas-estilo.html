@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <div>
+            <h3>Já tem um artista deixando seus dias mais musicais? Que tal saber mais sobre ele?</h3>
+            <p>Qual o nome do artista? <input type="text" name="nomeartista" id="nomeartista"></p>
+        </div>
+    </section>
+    
+    <div>            
+
+            <ul>
+            {% for p in object_list  %}
+                <li>{{p.nome}}</li><br>
+                <li>{{p.estilo_musical}}</li><br>            
+                <li>{{p.descricao}}</li><br>
+            {% empty %}
+                <li>Sem artistas</li>        
+            {% endfor %}
+            </ul>
+            
+    </div>    
+{% endblock %}

@@ -6,12 +6,17 @@
 
     <section>
         <div>
-            
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button name="submit">Cadastrar artista</button>
+                <input type="hidden" name="next" value="{% url 'busca' %}"/>
+            </form>
         </div>
     </section>
 
 
 
-    {{ form }}
+    
 
 {% endblock %}

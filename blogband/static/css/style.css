@@ -1,3 +1,23 @@
-header {
-    background-color: antiquewhite;
+body {
+    background-color:antiquewhite;
 }
+
+header{
+    background-color:rgb(250, 213, 168);
+    
+}
+
+/*section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.45);
+    text-align: center;
+} */
+
+
+
+
+    
